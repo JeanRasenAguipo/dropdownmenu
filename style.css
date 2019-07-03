@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background: gray;
+}
+ul ul ul {
+	left: 100%;
+	top: 0;
+}
+ul:before,
+ul:after {
+	content: " ";
+	display: table;
+}
+
+ul:after { 
+	clear: both; 
+}
+ul li {
+	display: block;
+	position: relative;
+	float: left;
+	background: gray;
+}
+ul li a {
+	display: block;
+	padding: 1em;
+	text-decoration: none;
+	white-space: nowrap;
+	color: white;
+}
+ul li a:hover { 
+	background: black; 
+}
+li:hover > ul {
+	display: block;
+	position: absolute;
+}
+li:hover li { 
+	float: none; 
+}
+li:hover a { 
+	background: gray; 
+	}
+li:hover li a:hover { 
+	background: black; 
+}
+
+li ul { 
+	display: none; 
+}
+.main-navigation li ul li { 
+	border-top: 0; 
+}
